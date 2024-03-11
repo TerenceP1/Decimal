@@ -22,6 +22,15 @@ public:
             byte=bt;
             offset=os;
         }
-        
+        operator bool() const{
+            return (byte&(1<<offset))>>offset;
+        }
+        void operator =(bool x){
+            if (x){
+                *byte=*byte|(1<<offset);
+            }else{
+                *byte=*byte&(~(1<<offset));
+            }
+        }
     }
 };
