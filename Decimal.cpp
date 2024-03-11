@@ -13,4 +13,15 @@ public:
     ~bitmap(){
         delete[] bmp;
     }
+    class bitRef {
+    private:
+        unsigned char* byte;
+        short int offset;
+    public:
+        bitRef(unsigned char* bt, short int os){
+            byte=bt;
+            offset=os;
+        }
+        
+    }
 };
