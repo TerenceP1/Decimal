@@ -6,7 +6,7 @@ private:
     unsigned char* bmp;
 public:
     bitmap(unsigned long long sz) {
-        len = (sz + 3) / 4;
+        len = (sz + 7) / 8;
         bmp = new unsigned char[len];
         size = sz;
     }
@@ -35,7 +35,7 @@ public:
         }
     };
     bitRef operator[] (unsigned long long x) {
-        bitRef res(bmp + (x / 4), x % 4);
+        bitRef res(bmp + (x / 8), x % 8);
         return res;
     }
 };
