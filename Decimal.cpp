@@ -33,7 +33,7 @@ public:
                 *byte = *byte & (~(1 << offset));
             }
         }
-    }
+    };
     bitRef operator[] (unsigned long long x) {
         bitRef res(bmp + (x / 4), x % 4);
         return res;
