@@ -55,4 +55,9 @@ public:
     ~uDecimal() {
         delete num;
     }
+    void operator = (uDecimal x&) {
+        for (unsigned long long i = 0; i < sz; i++) {
+            num[i] = x.num[i];
+        }
+    }
 };
