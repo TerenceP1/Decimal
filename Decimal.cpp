@@ -39,3 +39,20 @@ public:
         return res;
     }
 };
+
+
+class uDecimal {
+private:
+    bitmap* num;
+    unsigned long long sz;
+    unsigned long long dp;
+public:
+    uDecimal(unsigned long long size, unsigned long long decP) {
+        dp = decP;
+        sz = size;
+        num = new bitmap(size);
+    }
+    ~uDecimal() {
+        delete num;
+    }
+};
