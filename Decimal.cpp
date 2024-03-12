@@ -25,7 +25,7 @@ public:
         operator bool() const {
             return (byte & (1 << offset)) >> offset;
         }
-        void operator = (bool x){
+        void operator = (bool x) {
             if (x) {
                 *byte = *byte | (1 << offset);
             }
