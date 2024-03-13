@@ -64,9 +64,11 @@ public:
         uDecimal res(sz, dp);
         bool pass = false;
         for (unsigned long long i = 0; i < sz; i++) {
-            res.num->[i] = (num->[i] != x.num->[i]) != pass;
-            pass = ((num->[i] != x.num->[i]) && pass) || (num->[i] && x.num->[i]);
+            *(res.num)[i] = (*num[i] != *(x.num)[i]) != pass;
+            pass = ((*num[i] != *(x.num)[i]) && pass) || (*(num)[i] && *(x.num)[i]);
         }
         return res;
+    }
+    uDecimal operator - (uDecimal x&) {
     }
 };
