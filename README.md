@@ -7,4 +7,18 @@
 
 ## Storage
 
-These classes use dynamic memory and the memory must be freed with ```delete```.
+These classes use dynamic memory and the memory must be freed with ```delete```. Numbers are stored as bitmaps.
+
+## uDecimal
+
+Represents an unsigned decimal. Synax:
+
+
+```
+uDecimal(
+    int sz,
+    int dp
+);
+```
+**sz**: size of decimal in bits
+**dp**: offset of decimal point in bits
